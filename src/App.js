@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import {useEffect} from 'react'
 
+const tele = window.Telegram.WebApp
 function App() {
+  console.log('test telegram user =>>>>',tele)
+  useEffect(()=>{
+    tele.ready()
+  })
   return (
     <div className="App">
       <header className="App-header">
