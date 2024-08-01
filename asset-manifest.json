@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/t-bot/static/css/main.cc504a57.css",
+    "main.js": "/t-bot/static/js/main.a6979295.js",
+    "static/js/453.8720ad48.chunk.js": "/t-bot/static/js/453.8720ad48.chunk.js",
+    "static/media/EduAUVICWANTHand-SemiBold.ttf": "/t-bot/static/media/EduAUVICWANTHand-SemiBold.13f8a66e44f2b86e8dc3.ttf",
+    "static/media/EduAUVICWANTHand-Medium.ttf": "/t-bot/static/media/EduAUVICWANTHand-Medium.56ca8d5a312baeded775.ttf",
+    "static/media/EduAUVICWANTHand-Regular.ttf": "/t-bot/static/media/EduAUVICWANTHand-Regular.8356f609d39a25904aec.ttf",
+    "static/media/EduAUVICWANTHand-Bold.ttf": "/t-bot/static/media/EduAUVICWANTHand-Bold.dbafcdb9173b142d49a0.ttf",
+    "static/media/super-sponge-bob.png": "/t-bot/static/media/super-sponge-bob.c433336984c2e653aeb7.png",
+    "index.html": "/t-bot/index.html",
+    "main.cc504a57.css.map": "/t-bot/static/css/main.cc504a57.css.map",
+    "main.a6979295.js.map": "/t-bot/static/js/main.a6979295.js.map",
+    "453.8720ad48.chunk.js.map": "/t-bot/static/js/453.8720ad48.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc504a57.css",
+    "static/js/main.a6979295.js"
+  ]
+}
