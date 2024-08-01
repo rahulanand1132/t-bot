@@ -1,0 +1,51 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  align-self: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: smirk infinite 2s alternate;
+  }
+}
+
+@keyframes smirk {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1)
+    rotate(3deg);
+  }
+}
+
+
+.container {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-evenly;
+}
+
+.continueButtonContainer{
+  width: 80%;
+  align-self: center;
+}
+
+.continueButton {
+  width: 100%;
+  background-color: rgb(19, 19, 88);
+  border: 0;
+  color: blanchedalmond;
+}
+
+.textStyle {
+  color: aliceblue;
+  align-self: center;
+  font-size: 26px;
+  width: 90%;
+  text-align: center;
+}
+

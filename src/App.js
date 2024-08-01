@@ -1,31 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import {useEffect} from 'react'
-
+import React, { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Telegram } from './Pages/Home/Telegram';
+// import { Form } from './Pages/Form';
+import { useEffect } from 'react';
+import CheckUserRating from './Pages/CheckUserRating';
 const tele = window.Telegram.WebApp
+
 function App() {
-  console.log('test telegram user =>>>>',tele)
-  useEffect(()=>{
+  console.log('test telegram user =>>>>', tele)
+  console.log('test telegram user data =>>>>', tele.initDataunsafe?.user)
+
+  useEffect(() => {
     tele.ready()
-  })
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    console.log("Hi")
+  }, [])
+  return (<BrowserRouter>
+    <Routes>
+      <Route path='/' Component={Telegram} />
+      <Route path='/CheckUserRating' Component={CheckUserRating} />
+    </Routes>
+  </BrowserRouter>);
 }
 
 export default App;

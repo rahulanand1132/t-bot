@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'EduBold';
+  src: local('EduAUVICWANTHand-Bold'), url('./Fonts/EduAUVICWANTHand-Bold.ttf') format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'EduMedium';
+  src: local('EduAUVICWANTHand-Medium'), url('./Fonts/EduAUVICWANTHand-Medium.ttf') format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'EduRegular';
+  src: local('EduAUVICWANTHand-Regular'), url('./Fonts/EduAUVICWANTHand-Regular.ttf') format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'EduAUVICWANTHand-SemiBold';
+  src: local('MyFont'), url('./Fonts/EduAUVICWANTHand-SemiBold.ttf') format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
