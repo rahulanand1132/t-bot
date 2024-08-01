@@ -4,6 +4,7 @@ import { Telegram } from './Pages/Home/Telegram';
 import { useEffect } from 'react';
 import CheckUserRating from './Pages/CheckUserRating';
 const tele = window.Telegram.WebApp
+const basename = process.env.NODE_ENV === 'production' ? '/t-bot' : '';
 
 function App() {
   console.log('test telegram user =>>>>', tele)
@@ -13,7 +14,7 @@ function App() {
     tele.ready()
     console.log("Hi")
   }, [])
-  return (<BrowserRouter>
+  return (<BrowserRouter basename={basename}>
     <Routes>
       <Route path='/' Component={Telegram} />
       <Route path='/CheckUserRating' Component={CheckUserRating} />
