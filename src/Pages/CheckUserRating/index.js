@@ -3,7 +3,8 @@ import { Button, Progress, Spin } from 'antd';
 import { CheckOutlined } from '@ant-design/icons';
 import styles from './checkUserRating.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
-
+const tele = window.Telegram.WebApp;
+const currentUserName=tele.initDataUnsafe?.user?.username;
 
 export default function CheckUserRating() {
     const [ratingProgress, setRatingProgress] = useState(0);
@@ -18,10 +19,20 @@ export default function CheckUserRating() {
         startFetchingDetailsTimer()
     },[])
 
-    const getRandomNumber = () => {
-        console.log('random number fetched!!!!!!');
-        return Math.floor(Math.random() * (55 - 15 + 1)) + 25;
-    };
+    // const getRandomNumber = () => {
+    //     console.log('random number fetched!!!!!!');
+    //     return Math.floor(Math.random() * (55 - 15 + 1)) + 25;
+    // };
+    const calculateRating = (username) => {
+        const lengthScore = 100 - username.length * 2; // Smaller length, higher score
+        const numberScore = 100 - (username.match(/\d/g) || []).length * 5; // Lesser numbers, higher score
+        const specialCharScore = 100 - (username.match(/[^a-zA-Z0-9]/g) || []).length * 10; // Lesser special characters, higher score
+      
+        // Order of rating values: characters > numbers > special characters
+        const totalScore = (lengthScore * 0.5) + (numberScore * 0.3) + (specialCharScore * 0.2);
+      
+        return Math.max(0, Math.min(100, totalScore)); // Ensure the score is between 0 and 100
+      };
 
     const interpolateColor = (color1, color2, factor) => {
         const result = color1.slice(1).match(/.{2}/g).map((hex, i) => {
@@ -72,12 +83,12 @@ export default function CheckUserRating() {
     };
 
     const startRatingTimer = () => {
-        console.log('started startRatingTimer');
+        console.log('started startRatingTimer , user rating>>',calculateRating(currentUserName));
         setShowRating(true);
-        let currentRandomNumber = 100-getRandomNumber()
+        // let currentRandomNumber = 100-getRandomNumber()
         const intervel = setInterval(() => {
             setRatingProgress((oldValue) => {
-                if (oldValue >= currentRandomNumber) {
+                if (oldValue >= calculateRating(currentUserName)) {
                     clearInterval(intervel);
                     setRatingFinished(true)
                     console.log('Finished startRatingTimer');
